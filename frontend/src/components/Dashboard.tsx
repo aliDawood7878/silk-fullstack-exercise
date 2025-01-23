@@ -4,11 +4,8 @@ import {
   PieChart, Pie, Cell, Tooltip, Legend,
   BarChart, Bar, XAxis, YAxis, CartesianGrid
 } from 'recharts';
-import './Dashboard.css'; // We'll create this next!
+import './Dashboard.css'; 
 
-/**
- * Matches columns in "grouped_findings"
- */
 interface GroupedFinding {
   id: number;
   grouping_type: string;
@@ -24,9 +21,7 @@ interface GroupedFinding {
   progress: string;
 }
 
-/**
- * Matches columns in "raw_findings"
- */
+
 interface RawFinding {
   id: number;
   source_security_tool_name: string;
@@ -41,7 +36,7 @@ interface RawFinding {
   status: string;
   remediation_url: string;
   remediation_text: string;
-  grouped_finding_id: number; // links to GroupedFinding.id
+  grouped_finding_id: number; 
 }
 
 const Dashboard: React.FC = () => {
